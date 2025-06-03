@@ -40,31 +40,31 @@ export GEMINI_API_KEY=your_api_key_here
 
 ### Basic usage
 ```bash
-python translate_markdown.py source_folder target_language
+python gemini_translation_script.py source_folder target_language
 ```
 
 ### Examples
 ```bash
 # Translate English docs to Spanish
-python translate_markdown.py english spanish
+python gemini_translation_script.py english spanish
 
 # Translate docs to French
-python translate_markdown.py my_docs french
+python gemini_translation_script.py my_docs french
 
 # Translate to any language
-python translate_markdown.py content "simplified chinese"
+python gemini_translation_script.py content "simplified chinese"
 ```
 
 ### Advanced options
 ```bash
 # Specify source language (default is English)
-python translate_markdown.py docs spanish --source_language english
+python gemini_translation_script.py docs spanish --source_language english
 
 # Use a different AI model
-python translate_markdown.py docs french --model_name gemini-2.0-flash-001
+python gemini_translation_script.py docs french --model_name gemini-2.0-flash-001
 
 # Overwrite existing files without asking
-python translate_markdown.py docs spanish --force_overwrite
+python gemini_translation_script.py docs spanish --force_overwrite
 ```
 
 ## File structure
@@ -77,10 +77,10 @@ project/
 │   ├── guide.md
 │   └── images/
 │       └── screenshot.png
-└── translate_markdown.py
+└── gemini_translation_script.py
 ```
 
-**After running:** `python translate_markdown.py english spanish`
+**After running:** `python gemini_translation_script.py english spanish`
 ```
 project/
 ├── english/
@@ -93,7 +93,7 @@ project/
 │   ├── guide.md          ← Translated!
 │   └── images/
 │       └── screenshot.png ← Copied as-is
-└── translate_markdown.py
+└── gemini_translation_script.py
 ```
 
 ## What gets translated

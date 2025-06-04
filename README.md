@@ -151,3 +151,48 @@ If you encounter issues:
 2. Make sure you have an internet connection
 3. Verify the source directory exists and contains `.md` files
 4. Try with a smaller test directory first
+
+## Combining Chapters into a Single File
+
+The `combine_language_chapters.py` script can be used to merge all chapter `index.md` files from a specific language folder (located in the project root) into a single Markdown document. This is useful for creating a full-text version of the book in a given language.
+
+### How to use `combine_language_chapters.py`
+
+**Basic usage:**
+```bash
+python combine_language_chapters.py <language_folder_name> <output_markdown_filename>
+```
+
+**Arguments:**
+-   `<language_folder_name>`: The name of the language folder in your project root (e.g., `english`, `swahili`, `french`). This folder should contain subdirectories for each chapter (e.g., `01-why-we-need/`, `02-bitcoin-fixes-this/`), each with an `index.md` file.
+-   `<output_markdown_filename>`: The desired name for the combined Markdown file (e.g., `Swahili_FullBook.md`).
+
+**Examples:**
+```bash
+# Combine all chapters from the 'swahili' folder into 'Swahili_Book.md'
+python combine_language_chapters.py swahili Swahili_Book.md
+
+# Combine all chapters from the 'english' folder into 'English_Complete.md'
+python combine_language_chapters.py english English_Complete.md
+```
+
+**Advanced options:**
+```bash
+# Specify a different source base directory (if language folders are not in the current dir)
+python combine_language_chapters.py swahili Swahili_Book.md --source_base_dir path/to/language_folders/
+
+# Change the Markdown heading level for chapter titles (default is 1 for H1)
+python combine_language_chapters.py french French_Book.md --title_level 2
+```
+
+**What the script does:**
+-   Looks for a language folder (e.g., `swahili/`) in the specified source base directory (defaults to the current directory).
+-   Finds all chapter subfolders (e.g., `01-some-topic/`, `02-another-topic/`) within that language folder.
+-   Sorts these chapter folders alphanumerically.
+-   For each chapter folder:
+    -   Derives a chapter title from the folder name (e.g., "01-Why We Need" becomes "Why We Need").
+    -   Reads the `index.md` file from the chapter folder.
+    -   Strips any existing YAML frontmatter from this `index.md`.
+    -   Prepends the derived chapter title as a Markdown heading (default H1).
+    -   Appends the chapter's content to the combined output.
+-   Saves the complete combined content to the specified output file.

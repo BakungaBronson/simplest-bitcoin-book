@@ -196,3 +196,13 @@ python combine_language_chapters.py french French_Book.md --title_level 2
     -   Prepends the derived chapter title as a Markdown heading (default H1).
     -   Appends the chapter's content to the combined output.
 -   Saves the complete combined content to the specified output file.
+
+## Google Docs Drafts For Review
+
+Simplest Bitcoin Book Translations 1: This document contains full book translations in Swahili, Luganda, French, Yoruba, Hindi, Russian, Rukiga, Bulgarian, German, Hausa, Zulu, and Italian.
+
+Link: https://docs.google.com/document/d/14Mc0iri-sFQ963Q0ohZCFQMOclYDHQalAilAnTt0M-8/edit?usp=sharing
+
+Simplest Bitcoin Book Translations 2: This document includes full book translations in Bahasa Indonesia, Xhosa, Korean, Japanese, and Mandarin Chinese.
+
+Link: https://docs.google.com/document/d/1qkRmABEflINoaZXRJ-mC_NCAjQlUSq0M4V_3skum1q4/edit?usp=sharing

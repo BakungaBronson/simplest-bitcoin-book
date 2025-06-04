@@ -3,20 +3,10 @@ from pathlib import Path
 import argparse
 import re
 
-def derive_chapter_title(folder_name: str) -> str:
-    """Derives a chapter title from the folder name."""
-    # Remove numeric prefix if it exists (e.g., "01-", "010-")
-    title_base = re.sub(r"^\d+-?", "", folder_name)
-    # Basic formatting: replace hyphens/underscores with spaces, title case
-    title_formatted = title_base.replace("-", " ").replace("_", " ")
-    # Capitalize words, handling potential multiple spaces
-    title_formatted = " ".join(word.capitalize() for word in title_formatted.split())
-    return title_formatted
-
-def combine_chapters(language_folder_name: str, source_base_dir: str, output_file: str, title_heading_level: int = 1):
+def combine_chapters(language_folder_name: str, source_base_dir: str, output_file: str, chapter_heading_level: int = 1):
     """
     Combines all index.md files from chapter folders of a given language 
-    from the project root into a single Markdown file, prepending chapter titles.
+    from the project root into a single Markdown file, prepending 'Chapter XX' titles.
     """
     lang_path = Path(source_base_dir) / language_folder_name
 
@@ -26,43 +16,46 @@ def combine_chapters(language_folder_name: str, source_base_dir: str, output_fil
 
     print(f"Processing language: '{language_folder_name}' from path: '{lang_path}'")
 
-    # Chapter folders are expected to be direct children of lang_path
-    # and typically have names like '01-some-topic', '02-another-topic'
     chapter_folders = sorted(
         [d for d in lang_path.iterdir() if d.is_dir() and re.match(r"^\d+-", d.name)],
-        key=lambda d: d.name
+        key=lambda d: int(re.match(r"^(\d+)-?", d.name).group(1)) if re.match(r"^(\d+)-?", d.name) else float('inf')
     )
 
     if not chapter_folders:
         print(f"No chapter folders (e.g., '01-something') found in '{lang_path}'.")
-        # If you have a main index.md directly in the language folder (e.g., swahili/index.md)
-        # and want to include it, that logic would need to be added here or handled separately.
-        # This script currently focuses on combining chapter sub-folders.
         return
 
     combined_content = ""
-    heading_marker = "#" * title_heading_level
-
-    # Optional: Include a main index.md from the root of the language folder itself, if it exists
-    # This was not in the original request for root folders but might be desired.
-    # For now, we focus only on the chapter subdirectories.
+    heading_marker = "#" * chapter_heading_level
+    chapter_counter = 1 # Fallback counter
 
     for chapter_dir in chapter_folders:
-        chapter_title = derive_chapter_title(chapter_dir.name)
+        folder_name_match = re.match(r"^(\d+)-?", chapter_dir.name)
+        if folder_name_match:
+            chapter_number_str = folder_name_match.group(1).lstrip('0')
+            if not chapter_number_str: # Handles cases like "00-"
+                chapter_number_str = "0"
+            chapter_prefix_title = f"Chapter {chapter_number_str}"
+        else:
+            # Fallback if folder name doesn't start with numbers like "01-"
+            chapter_prefix_title = f"Section {chapter_counter}" # Or just use chapter_counter if preferred
+        
         index_md_file = chapter_dir / "index.md"
 
         if index_md_file.exists():
-            print(f"  Processing chapter: '{chapter_dir.name}' (Title: '{chapter_title}')")
+            print(f"  Processing chapter folder: '{chapter_dir.name}' (as '{chapter_prefix_title}')")
             with open(index_md_file, 'r', encoding='utf-8') as f:
                 chapter_content = f.read()
+                # Remove existing frontmatter from chapter file
                 frontmatter_match = re.match(r"^---\s*\n(.*?)\n---\s*\n", chapter_content, re.DOTALL)
                 if frontmatter_match:
                     chapter_content = chapter_content[frontmatter_match.end():]
                 
-                combined_content += f"{heading_marker} {chapter_title}\n\n"
+                combined_content += f"{heading_marker} {chapter_prefix_title}\n\n"
                 combined_content += chapter_content.strip() + "\n\n"
         else:
             print(f"    Warning: '{index_md_file.name}' not found in '{chapter_dir.name}'. Skipping chapter.")
+        chapter_counter += 1
 
     try:
         output_path = Path(output_file)
@@ -75,7 +68,7 @@ def combine_chapters(language_folder_name: str, source_base_dir: str, output_fil
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Combines Markdown chapter files from a language folder in the project root."
+        description="Combines Markdown chapter files from a language folder in the project root, prepending 'Chapter XX' style titles."
     )
     parser.add_argument(
         "language_folder", 
@@ -94,13 +87,13 @@ if __name__ == "__main__":
         help="Base directory containing the language folders (default: current directory '.')."
     )
     parser.add_argument(
-        "--title_level",
+        "--chapter_heading_level",
         type=int,
         default=1,
         choices=[1, 2, 3, 4, 5, 6],
-        help="Markdown heading level for chapter titles (default: 1 for H1)."
+        help="Markdown heading level for 'Chapter XX' prefixes (default: 1 for H1)."
     )
 
     args = parser.parse_args()
 
-    combine_chapters(args.language_folder, args.source_base_dir, args.output_filename, args.title_level) 
+    combine_chapters(args.language_folder, args.source_base_dir, args.output_filename, args.chapter_heading_level) 

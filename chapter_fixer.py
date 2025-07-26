@@ -75,7 +75,7 @@ Produce a single "FIXED" version that combines the best of both files. You must 
 2. **Restore Markdown Syntax**: You MUST use the markdown structure (headings, exact blockquote formatting, newlines, lists, bold/italic markers) from the ORIGINAL version as the source of truth.
 3. **Restore Image Tags**: You MUST re-insert all image tags (e.g., `![alt text](image.png)`) from the ORIGINAL version into their correct locations within the newly edited text. The final output must contain all images from the original.
 
-**CRITICAL**: Do NOT add any commentary, explanations, or introductory text. Only output the raw, fixed Markdown content for the chapter.
+**CRITICAL**: Do NOT add any commentary, explanations, or introductory text, and **do NOT wrap the output in any code fences** (e.g., ``` or ```markdown). Only output the raw, fixed Markdown content for the chapter.
 
 ---
 **ORIGINAL Version (Correct Syntax and Images):**
@@ -113,7 +113,22 @@ Produce a single "FIXED" version that combines the best of both files. You must 
         
         for chunk in response_stream:
             result += chunk.text
-        return result.strip()
+        # Gemini sometimes wraps its output in fenced code blocks (e.g. ```markdown ... ```)
+        # These fences are not part of the actual chapter content and break Markdown layout,
+        # so we remove an opening fence at the very start and a closing fence at the very end.
+        cleaned = result.lstrip()
+        if cleaned.startswith("```"):
+            # Skip the first line (which should be the opening fence, possibly with a language spec).
+            first_newline = cleaned.find("\n")
+            if first_newline != -1:
+                cleaned = cleaned[first_newline + 1:]
+
+        # Remove a trailing fence if it is the last non-whitespace content.
+        cleaned = cleaned.rstrip()
+        if cleaned.endswith("```"):
+            cleaned = cleaned[:-3].rstrip()
+
+        return cleaned
     except errors.APIError as e:
         print(f"  ERROR: API error occurred: {e.code} - {e.message}")
         return original_chapter  # Fallback to original to prevent data loss on API failure.

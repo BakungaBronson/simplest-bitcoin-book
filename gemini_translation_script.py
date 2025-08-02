@@ -1,6 +1,7 @@
 import os
 import shutil
 import argparse
+import re
 from google import genai
 from google.genai import types
 from pathlib import Path
@@ -11,6 +12,96 @@ DEFAULT_SOURCE_LANG = "english"
 # Recommended to use a newer model that is good with instruction following.
 # Check https://ai.google.dev/gemini-api/docs/models/gemini for available models.
 DEFAULT_MODEL_NAME = "gemini-2.0-flash" 
+
+# Rough estimate of tokens per character (conservative estimate for most languages)
+CHARS_PER_TOKEN = 4
+MAX_CHUNK_TOKENS = 6000  # Leave some buffer below the 8192 limit
+MAX_CHUNK_CHARS = MAX_CHUNK_TOKENS * CHARS_PER_TOKEN
+
+def split_markdown_into_chapters(content: str) -> list[str]:
+    """
+    Splits markdown content into chapters based on heading patterns.
+    Returns a list of chapter strings, each starting with a heading.
+    """
+    # Pattern to match chapter headings (# Chapter N, ## Chapter N, etc.)
+    chapter_pattern = re.compile(r'^(#+\s+(?:Chapter|Ch\.?)\s+\d+.*?)$', re.MULTILINE | re.IGNORECASE)
+    
+    # Find all chapter starts
+    matches = list(chapter_pattern.finditer(content))
+    
+    if not matches:
+        # No chapters found, try to split on any major heading
+        heading_pattern = re.compile(r'^(#{1,2}\s+.+?)$', re.MULTILINE)
+        matches = list(heading_pattern.finditer(content))
+        
+        if not matches:
+            # No major headings, return whole content if small enough
+            return [content] if len(content) <= MAX_CHUNK_CHARS else split_by_size(content)
+    
+    chapters = []
+    for i, match in enumerate(matches):
+        start = match.start()
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(content)
+        chapter = content[start:end].strip()
+        
+        # If chapter is still too large, split it further
+        if len(chapter) > MAX_CHUNK_CHARS:
+            chapters.extend(split_by_size(chapter))
+        else:
+            chapters.append(chapter)
+    
+    # Handle content before first chapter
+    if matches and matches[0].start() > 0:
+        preamble = content[:matches[0].start()].strip()
+        if preamble:
+            if len(preamble) > MAX_CHUNK_CHARS:
+                chapters = split_by_size(preamble) + chapters
+            else:
+                chapters.insert(0, preamble)
+    
+    return chapters
+
+def split_by_size(content: str) -> list[str]:
+    """
+    Splits content by approximate size, trying to break at paragraph boundaries.
+    """
+    if len(content) <= MAX_CHUNK_CHARS:
+        return [content]
+    
+    chunks = []
+    paragraphs = content.split('\n\n')
+    current_chunk = ""
+    
+    for paragraph in paragraphs:
+        # If adding this paragraph would exceed limit, start new chunk
+        if current_chunk and len(current_chunk) + len(paragraph) + 2 > MAX_CHUNK_CHARS:
+            chunks.append(current_chunk.strip())
+            current_chunk = paragraph
+        else:
+            if current_chunk:
+                current_chunk += '\n\n' + paragraph
+            else:
+                current_chunk = paragraph
+                
+        # If even a single paragraph is too large, split it by sentences
+        if len(current_chunk) > MAX_CHUNK_CHARS:
+            sentences = re.split(r'(?<=[.!?])\s+', current_chunk)
+            chunk_part = ""
+            for sentence in sentences:
+                if chunk_part and len(chunk_part) + len(sentence) + 1 > MAX_CHUNK_CHARS:
+                    chunks.append(chunk_part.strip())
+                    chunk_part = sentence
+                else:
+                    if chunk_part:
+                        chunk_part += ' ' + sentence
+                    else:
+                        chunk_part = sentence
+            current_chunk = chunk_part
+    
+    if current_chunk.strip():
+        chunks.append(current_chunk.strip())
+    
+    return chunks
 
 def translate_text(client: genai.Client, model_name: str, text_content: str, target_language: str, source_language: str, safety_settings: list) -> str | None:
     """
@@ -71,7 +162,8 @@ When you are given the Markdown text, provide only the translated version of it.
             contents=text_content, # Actual markdown to translate
             config=types.GenerateContentConfig(
                 system_instruction=system_instruction_prompt,
-                safety_settings=safety_settings
+                safety_settings=safety_settings,
+                max_output_tokens=8192,  # Maximum for Gemini 2.0 Flash
                 # Add other config like temperature here if needed
             )
         )
@@ -212,9 +304,30 @@ def main():
                             f.write("") # Create empty file in target
                         continue
 
-                    translated_content = translate_text(
-                        client, args.model_name, original_content, target_language_name, args.source_language, safety_settings
-                    )
+                    # Check if file is too large and needs chunking
+                    if len(original_content) > MAX_CHUNK_CHARS:
+                        print(f"  File is large ({len(original_content)} chars), splitting into chunks...")
+                        chunks = split_markdown_into_chapters(original_content)
+                        print(f"  Split into {len(chunks)} chunks")
+                        
+                        translated_chunks = []
+                        for i, chunk in enumerate(chunks, 1):
+                            print(f"  Translating chunk {i}/{len(chunks)}...")
+                            translated_chunk = translate_text(
+                                client, args.model_name, chunk, target_language_name, args.source_language, safety_settings
+                            )
+                            if translated_chunk:
+                                translated_chunks.append(translated_chunk)
+                            else:
+                                print(f"  Warning: Failed to translate chunk {i}, using original")
+                                translated_chunks.append(chunk)
+                        
+                        # Join chunks back together
+                        translated_content = "\n\n".join(translated_chunks)
+                    else:
+                        translated_content = translate_text(
+                            client, args.model_name, original_content, target_language_name, args.source_language, safety_settings
+                        )
 
                     if translated_content:
                         with open(target_file_path, "w", encoding="utf-8") as f:

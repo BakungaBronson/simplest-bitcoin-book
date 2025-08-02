@@ -1,7 +1,7 @@
 # BITCOIN COMMUNITY PROJEKTE
-Unten sind einige der Basisprojekte auf der ganzen
-Welt, die daran arbeiten, eine lokale Wirtschaft mit Bitcoin zu bilden
-und aufzuklären.
+Unten sind einige der Basisprojekte rund um
+die Welt, die daran arbeiten, aufzuklären und eine
+lokale Wirtschaft mit Bitcoin zu schaffen.
 
 Folge ihnen auf Nostr oder Twitter, um mehr zu erfahren oder zu
 spenden:
@@ -14,7 +14,7 @@ spenden:
 * **Bitcoin Bay** - Florida, USA - @bitcoinbaytpa
 * **Bitcoin Lake**- Lake Atitlan - @LakeBitcoin
 * **Bitcoin House** Bali - Indonesien - @btchousebali
-* **7 Mile Bitcoin** - Cayman Inseln - 7milebitcoin.org
+* **7 Mile Bitcoin** - Kaimaninseln - 7milebitcoin.org
 * **Bitcoin Kampala** - Uganda - @BitcoinKampala
 * **Bitcoin Retreat** - Philippinen - @BtcRetreat
 * **Bridge2Bitcoin** - UK - @Bridge2Bitcoin

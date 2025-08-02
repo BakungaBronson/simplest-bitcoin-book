@@ -1,14 +1,14 @@
-# RESSOURCEN FÜR DEN BITCOIN-KANINCHENBAU
-"Immer kurioser!" sagte Alice
+# RESSOURCEN FÜR DEN BITCOIN KANINCHENBAU
+"Immer kurioser!", sagte Alice
 
 ## FILME
 * Du kannst diese Filme auf YouTube oder Rumble finden.
 
-## BITCOIN-FILME:
+## BITCOIN FILME:
 
 * @MaxDeMarco und @GetBasedTV auf YouTube
 * Bitcointv.com
-* Dirty Coin: Eine Bitcoin-Mining-Dokumentation (2024)
+* Dirty Coin: A Bitcoin Mining Documentary (2024)
 * Immutable Democracy: film.simpleproof.com (2023)
 * The Great Reset and the Rise of Bitcoin (2022)
 * A Sly Roundabout Way: aslyroundaboutway.com (2022)
@@ -43,7 +43,7 @@
 * **Inventing Bitcoin** von Yan Pritzker
 * **Check Your Financial Privilege** von Alex Gladstein
 * **Why Buy Bitcoin** von Andy Edstrom
-* **Bitcoin Audible:** Guy Swann liest Bitcoin-Bücher
+* **Bitcoin Audible:** Guy Swann liest Bitcoin Bücher
 * **The Bitcoin Dictionary** von Ansel Lindner
 * **The Genesis Book** von Aaron van Wirdum
 * **Gradually, then Suddenly** von Parker Lewis
@@ -58,7 +58,7 @@
 * **The Sovereign Individual** von Davidson & Rees-Mogg
 
 ## PODCASTS
-**Höre über die Fountain App, um Sats an die Hosts zu streamen!
+**Höre über die Fountain App, um Sats an Hosts zu streamen!
 Wenn noch nicht auf Fountain, finde diese auf Spotify und iTunes.**
 * **Citadel Dispatch** mit Matt Odell
 * **Bitcoin Rapid Fire** mit John Vallis
@@ -78,9 +78,9 @@ Wenn noch nicht auf Fountain, finde diese auf Spotify und iTunes.**
 * **Bitcoin Audible** Guy Swann liest Bücher/Artikel
 
 ## KOSTENLOSE KURSE
-* **My First Bitcoin** - Bitcoin-Lehrplan
+* **My First Bitcoin** - Bitcoin Lehrplan
 * **Saylor Academy** - Bitcoin für Jedermann
-* **Looking Glass Education** - Geld- & Bitcoin-Kurse
+* **Looking Glass Education** - Geld & Bitcoin Kurse
 
 ## WEBSEITEN
 * Nakamotoinstitute.org
@@ -92,7 +92,7 @@ Wenn noch nicht auf Fountain, finde diese auf Spotify und iTunes.**
 * Casebitcoin.com
 * Bitcoiner.guide
 * Bitcoin.tv
-* Learnmeabitcoin.com - Großartige einfache BTC-Tech-Erklärung!
+* Learnmeabitcoin.com - Großartige, einfache technische Erklärung zu BTC!
 * Hope.com
 * Bitcoin-resources.com
 * Myfirstbitcoin.io (Auch auf Spanisch verfügbar)
@@ -113,42 +113,43 @@ Wenn noch nicht auf Fountain, finde diese auf Spotify und iTunes.**
 ---
 
 ## BT ~ BITCOIN TWITTER
-Einige Cypherpunks, Genies, Koryphäen und Wilde zum Folgen!
-Durch diese Accounts wirst du 1000de Plebs finden
+Einige Cypherpunks, Genies, Ziegen & Wilde, denen man folgen sollte!
+Über diese Konten findest du Tausende von Plebs
 und andere tiefe Denker,
 alle auf der Reise.
-BT, zusammen mit bitcointalk.org und Reddit, war größtenteils der Ort,
+BT war zusammen mit bitcointalk.org und Reddit größtenteils der Ort,
 wo dieses Experiment gewachsen ist,
-und jetzt von Nostr ergänzt,
+und wird jetzt von Nostr begleitet,
 dem dezentralen Kommunikationsprotokoll,
-das sich alles in Echtzeit, über Zeit und Raum entfaltet,
+das sich in Echtzeit über Zeit und Raum entfaltet,
 in den Äthern des Cyberspace, verbunden mit dem Physischen,
 durch uns alle,
 Menschen,
 die eine Vision einer dezentralen Welt teilen.
-Dann gibt es noch die leiseren, Entwickler, die
-hinter den Kulissen arbeiten
+Dann gibt es noch die stilleren, Entwickler, die
+hinter den Kulissen arbeiten,
 ohne die
 nichts davon möglich wäre.
 Wir alle
 zusammen,
 entfesselt,
-wie Bitcoin auf uns losgelassen wurde,
-ein Segen, der unermesslich ist.
+so wie Bitcoin auf uns losgelassen wurde,
+ein Segen unermesslichen Ausmaßes.
 
-**THEMEN UMFASSEN:** Bitcoin, Proof-of-Work, Datenschutz, Philosophie,
+
+**THEMEN UMFASSEN:** Bitcoin, Proof-of-Work, Privatsphäre, Philosophie,
 Geldgeschichte, Code, Bitcoin Mining, Soziologie, Spieltheorie,
-Österreichische Wirtschaft, Bitcoin-Bildung, Lightning
-Netzwerk, Regulatorisches Umfeld, Bitcoin's Energieverbrauch,
-Kernentwickler, Bitcoin-Gemeinschaften, Bitcoin's Zukunft und mehr.
+Österreichische Wirtschaft, Bitcoin Bildung, Lightning Netzwerk,
+Regulatorisches Umfeld, Bitcoins Energieverbrauch,
+Core Devs, Bitcoin Communities, Bitcoins Zukunft und mehr.
 
-**Sei gewarnt:** Es hilft, eine etwas dickere Haut auf Twitter zu haben,
+**Sei gewarnt:** Es hilft, auf Twitter ein etwas dickeres Fell zu haben,
 und wisse dies, es gibt viel Leidenschaft bei der Verteidigung von
 Bitcoin. Eine klare Linie zwischen ihm und all den
 Altcoins zu ziehen, erfordert Arbeit. Die Klarheit, Sicherheit und
 Reinheit des einzig wirklich soliden Geldes, das die Welt je
-gekannt hat, zu erhalten, ist entscheidend, wenn wir in diesen Zeiten
-eine Chance haben wollen, die da kommen.
+gekannt hat, zu bewahren, ist entscheidend, wenn wir in diesen Zeiten
+eine Chance haben wollen.
 
 ---
 

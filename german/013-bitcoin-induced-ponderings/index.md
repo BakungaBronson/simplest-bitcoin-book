@@ -1,5 +1,5 @@
-# BITCOIN-INDUZIERTE ÜBERLEGUNGEN
-Ein Dank an
+# BITCOIN-BEDINGTE ÜBERLEGUNGEN
+Grüße an
 
 Satoshi
 
@@ -11,17 +11,17 @@ Träumer
 
 Seher
 
-Cypher Punk Zauberer
+Cypher-Punk-Zauberer
 
 Dichter für die Freiheit
 
-Hüter der Weisheit
+Bewahrer der Weisheit
 
 souveräne Individuen
 
 Hodler der letzten Instanz
 
-furchtlos vorwärts schreitend
+furchtlos vorwärts strebend
 
 allein zusammen
 
@@ -31,15 +31,15 @@ Vires In Numeris!
 
 ---
 
-## EINE ÜBERLEGUNG ZUM KANINCHENBAU
+## EINE KANINCHENBAU-BETRACHTUNG
 
 Bitcoin ist wirklich eine ziemlich faszinierende "Sache"
 
 Außer dass es keine "Sache" ist
 
-In dem Sinne, dass man es nicht berühren kann
+In dem Sinne, dass man es nicht anfassen kann
 
-Und doch berührt es Millionen von uns
+Dennoch berührt es Millionen von uns
 
 Auf der ganzen Welt
 
@@ -47,7 +47,7 @@ Bald werden es Milliarden sein...
 
 Es stimmt, dass
 
-es digitale Bits und Bytes sind
+Es digitale Bits und Bytes sind
 
 Algorithmen und Code
 
@@ -57,81 +57,83 @@ Und dass, wenn jeder einzelne Knoten
 
 Archivknoten, beschnittener Knoten und leichter Knoten
 
-irgendwie
+Irgendwie
 
-zerstört würden
+Zerstört
 
-es nicht mehr existieren würde
+Es würde nicht mehr existieren
 
-in der Art, wie wir es kennen
+So wie wir es kennen
 
-in der Lage sind, es wahrzunehmen...
+In der Lage sind, es wahrzunehmen...
 
-Es würde aber dennoch "existieren"
+Es würde jedoch immer noch "existieren"
 
-in dem Sinne, dass die Quantenphysik
+In dem Sinne, dass die Quantenphysik
 
-oder die Schwerkraft
+Oder die Schwerkraft
 
-existiert
+Existieren
 
-unabhängig von der menschlichen Wahrnehmung...
+Unabhängig von der menschlichen Wahrnehmung...
 
-in dem Sinne, dass Mathematik existierte
+In dem Sinne, dass die Mathematik existierte
 
-bevor Menschen sie kodifizierten
+Bevor Menschen sie kodifizierten
 
 Symbole wählten, um sie darzustellen...
 
-Die Wahrheit
+Wahrheit
 
-braucht uns nicht
+Braucht uns nicht
 
-## WARUM WIRD SICH ALLER WERT BEI BITCOIN ANSAMMELN
+## WARUM WIRD DER GESAMTE WERT AN BITCOIN FALLEN?
 
 Es gibt einige interessante Spieltheorien, die anscheinend
 konvergieren, wenn es um Bitcoin geht, was die
-Wahrscheinlichkeit für sein Wachstum und seinen steigenden Wert im Laufe der Zeit
+Wahrscheinlichkeit seines Wachstums und seines steigenden Wertes im Laufe der Zeit
 immer sicherer macht.
 
 ## SCHELLING-PUNKT
 
-* Der Schelling-Punkt wurde in den 1960er Jahren vom amerikanischen Wirtschaftswissenschaftler
+* Der Schelling-Punkt wurde in den 1960er Jahren von dem amerikanischen Ökonomen
 Thomas Schelling eingeführt und besagt im Wesentlichen,
-dass **Menschen, die nicht unbedingt miteinander
-kommunizieren können, sich dennoch auf eine Entscheidung
-oder Vorgehensweise einigen können, insbesondere wenn eine überzeugende
-Lösung für ein Problem präsentiert wird** (-> Bitcoin)
-* Da immer mehr Menschen von dem Schelling-Punkt angezogen
-werden, zieht er immer mehr Menschen an (-> Bitcoin)
+dass **Menschen, die nicht unbedingt miteinander kommunizieren
+können, dennoch zu einer Entscheidung
+oder einem Vorgehen gelangen können, insbesondere wenn sich eine überzeugende
+Lösung für ein Problem anbietet** (-> Bitcoin)
+* Da immer mehr Menschen von dem Schelling-
+Punkt angezogen werden, zieht er immer mehr Menschen an (-> Bitcoin)
 
 ## LINDY-EFFEKT
 * Im Wesentlichen besagt der Lindy-Effekt, **dass je länger eine
 Idee, eine Technologie oder ein Unternehmen existiert,
-desto länger wird es wahrscheinlich bestehen bleiben.**
+desto länger wird sie wahrscheinlich andauern.**
 
 ## METCALFES GESETZ
 
 * Popularisiert von Robert Metcalfe, der unter anderem
-Ethernet erfunden hat. Das Metcalfe-Gesetz besagt,
-dass **ein Netzwerk umso wertvoller wird, je mehr Nutzer es hat.** Der Nutzen steigt exponentiell, je mehr Nutzer hinzukommen, was das Netzwerk stärkt.
+Ethernet erfand. Metcalfes Gesetz besagt,
+dass **ein Netzwerk proportional wertvoller wird, je mehr Nutzer es hat.** Der Nutzen steigt exponentiell, je mehr Nutzer hinzukommen, was
+das Netzwerk stärkt.
 
 ---
 
 ## DAS P2P-NETZWERK
->*Es ist eine globale, verteilte Datenbank, deren
-Ergänzungen durch die Zustimmung der Mehrheit erfolgen...*
+>*Es ist eine globale, verteilte Datenbank, mit
+Ergänzungen zur Datenbank mit Zustimmung der
+Mehrheit...*
 
 ~ Satoshi Nakamoto 2009-02-18
 
-![Live-Karte](figure-032-live%20map.png)
+![live map](figure-032-live%20map.png)
 
 Globale erreichbare Bitcoin-Knoten-Verteilung, Juni 2024
 
->*Das Ergebnis ist ein verteiltes System ohne
-Single Point of Failure. Die Nutzer haben
-die Kryptoschlüssel zu ihrem eigenen Geld und
-transagieren direkt miteinander, mit
+>*Das Ergebnis ist ein verteiltes System mit
+keinem einzigen Ausfallpunkt. Die Nutzer halten
+die Krypto-Schlüssel zu ihrem eigenen Geld und
+handeln direkt miteinander, mit
 Hilfe des P2P-Netzwerks, um auf
 Doppelausgaben zu prüfen.*
 
@@ -139,28 +141,28 @@ Doppelausgaben zu prüfen.*
 
 ---
 
-## BITCOIN, GEWALTLFREIE KOMMUNIKATION & PERMAKULTUR
+## BITCOIN, GEWALTLOSEN KOMMUNIKATION & PERMAKULTUR
 
-Ich sehe **Bitcoin**, der uns von Satoshi Nakamoto gebracht wurde, als die
-Grundlage für eine gesunde Gesellschaft in Bezug auf:
+Ich sehe **Bitcoin,** uns von Satoshi Nakamoto gebracht, als
+die Grundlage für eine gesunde Gesellschaft in Bezug auf:
 
-* **Kommunikation von Wert**
+* **Kommunikation von Werten**
 * **Transaktionen und Austausch**
-* **Speicherung unserer Zeit/Lebensenergie**
+* **Speichern unserer Zeit/Lebensenergie**
 in einer emergenten, organischen, ehrlichen Entfaltung.
 
-Ich sehe **Gewaltfreie Kommunikation**, die uns von Marshall
-Rosenberg PhD gebracht wurde, als die Grundlage für eine gesunde Gesellschaft
+Ich sehe **Gewaltfreie Kommunikation,** uns von Marshall
+Rosenberg PhD gebracht, als die Grundlage für eine gesunde Gesellschaft
 in Bezug auf:
 
 * **Kommunikation von Gefühlen und Bedürfnissen**
 * **tiefes Zuhören, Empathie**
-* **gemeinsam kreative Lösungen finden**
+* **gemeinsame, kreative Lösungen finden**
 in einer emergenten, organischen, ehrlichen Entfaltung.
 
-Ich sehe **Natürliche Landwirtschaft und Permakultur**, die uns von
+Ich sehe **Natürliche Landwirtschaft und Permakultur,** uns von
 unseren Vorfahren und in jüngerer Zeit von Masunobu Fukuoka und Bill
-Mollison gebracht wurden, als die Grundlage für eine gesunde Gesellschaft
+Mollison gebracht, als die Grundlage für eine gesunde Gesellschaft
 in Bezug auf:
 
 * **Kommunikation mit der Erde**
@@ -172,8 +174,7 @@ in einer emergenten, organischen und ehrlichen Entfaltung
 
 Jede dieser Technologien, eine mathematische, die
 uns über die Mathematik hinausführt, eine sprachliche, die uns über die
-Sprache hinausführt, eine biologische, die uns über die Biologie hinausführt,
-basiert auf Wahrheit.
+Sprache hinausführt, eine biologische, die uns über die Biologie hinausführt, basiert auf Wahrheit.
 
 Es liegt an uns, sie zu nutzen, sie zu leben und
 uns von ihnen tiefer und tiefer in das
@@ -182,7 +183,7 @@ unserer Wahrnehmung spüren.
 
 **Mögen wir den Mut, die Kraft,
 die Weisheit und die Gnade finden,
-furchtlos voranzuschreiten
+uns furchtlos auf den Weg zu machen
 auf der Reise**
 
 ![b](figure-033-b.png)

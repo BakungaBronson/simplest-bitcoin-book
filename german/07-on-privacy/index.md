@@ -1,4 +1,4 @@
-# ÜBER PRIVATSPHÄRE
+# ZUM THEMA PRIVATSPHÄRE
 ## LEITFÄDEN ZUM DATENSCHUTZ
 * Bitcoiner.guide @BitcoinQ_A
 * Econoalchemist.com @econoalchemist
@@ -13,9 +13,9 @@
 * Keepitsimplebitcoin.com @KISBitcoin
 * nbtv.media @naomibrockwell
 
-## VPN (Virtuelles Privates Netzwerk, um deinen ISP zu verschleiern)
-* Mullvad.net - Mit Bitcoin bezahlen
-* IVPN.net - Mit Bitcoin bezahlen
+## VPN (Virtuelles Privates Netzwerk zur Verschleierung deines ISPs)
+* Mullvad.net - Bezahle mit Bitcoin
+* IVPN.net - Bezahle mit Bitcoin
 
 ## ZWEI-FAKTOR-AUTHENTIFIZIERUNGS-APPS
 * Yubi Key - Hardware
@@ -32,25 +32,25 @@
 * StandardNotes.com
 ## DATENSCHUTZORIENTIERTE SUCHMASCHINEN
 * Duck Duck Go
-* Kagi - Bezahlte und werbefreie Version
+* Kagi - Bezahlte und werbefreie Suchmaschine
 * SearXNG
 * Swisscows
 * Mojeek
 
-## DATENSCHUTZORIENTIERTE MESSAGING-APPS
+## DATENSCHUTZORIENTIERTE NACHRICHTEN-APPS
 * Signal
 * SimpleX
 * Session
-* Telegram - Einstellung 'Geheimer Chat'
-## EIGENE NODE BETREIBEN
+* Telegram - 'Geheimer Chat' Einstellung
+## BETREIBEN EINES EIGENEN NODES
 * Bitcoin Knots
 * Bitcoin Core
 * Ronin Dojo
 * Run Citadel
 * Raspi Blitz
-* Umbrel - Wenn du nur deine Bitcoin-Node darauf betreibst.
-## HANDYS/EINMALIG VERWENDBARE TELEFONNUMMERN
-* Graphene OS auf einem Android Pixel ausführen
+* Umbrel - Wenn du deinen Bitcoin-Node nur darauf betreibst.
+## HANDYS/EINWEG-TELEFONNUMMERN
+* Betreibe Graphene OS auf einem Android Pixel
 * Silent.link - Akzeptiert Bitcoin & Lightning
 * Text Verified - Akzeptiert Bitcoin
 
@@ -63,18 +63,18 @@
 * Hinweis: Lies immer das Kleingedruckte
 ## BOT FÜR PRIVATE EMPFANGSADRESSEN
 * PayNym
-## DEZENTRALE SOZIALE MEDIEN
+## DEZENTRALISIERTE SOZIALE MEDIEN
 * Nostr
 
 >*Die Möglichkeit, anonym oder
 pseudonym zu sein, hängt davon ab, dass du keine
 identifizierenden Informationen über
-dich im Zusammenhang mit den Bitcoin-
-Adressen, die du verwendest, preisgibst. Wenn du deine
+dich selbst in Verbindung mit den Bitcoin-
+Adressen preisgibst, die du verwendest. Wenn du deine
 Bitcoin-Adresse im Web veröffentlichst, dann
-verbindest du diese Adresse und alle
-Transaktionen damit mit dem Namen, unter dem du
-gepostet hast.
+assoziierst du diese Adresse und alle
+Transaktionen damit mit dem Namen, den du
+veröffentlicht hast.
 Wenn du unter einem Handle gepostet hast, das
 du nicht mit deiner echten
 Identität in Verbindung gebracht hast, dann bist du immer noch pseudonym.*

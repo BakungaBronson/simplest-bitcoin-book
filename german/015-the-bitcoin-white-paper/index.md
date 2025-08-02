@@ -1,29 +1,27 @@
 # Das Bitcoin White Paper
-Der Welt präsentiert auf metzdowd.com
+Der Welt vorgestellt auf metzdowd.com
 2008-10-31
 
 **von Satoshi Nakamoto**
 
 Ein pseudonymer Cypherpunk, der zuletzt mit der
-Cypherpunk-Gemeinschaft im bitcointalk.org
+Cypherpunk-Community im bitcointalk.org
 Forum am 2010-12-10 kommunizierte.
 
-Durch sein Ausscheiden ermöglichte er, dass Bitcoin ein wahres Experiment
-in freier Wildbahn sein konnte. Jeder, der daran arbeitet, ist in gewisser
-Weise ein Freiwilliger <-> inspiriert vom Potenzial, die Menschheit
+Durch seinen Abschied ermöglichte er, dass Bitcoin ein wahres Experiment
+in freier Wildbahn sein konnte. Jeder, der daran arbeitet, ist in gewissem
+Sinne ein Freiwilliger <-> inspiriert von dem Potenzial, die Menschheit
 von den Fesseln eines manipulierten, schuldenbasierten Geldsystems zu befreien
 und stattdessen an einem globalen, vertrauenslosen,
-genehmigungsfreien, zensurresistenten, wirklich knappen, Peer-to-Peer,
-dezentralen Geld- und monetären Zahlungsnetzwerk teilzunehmen, das eine
-aufkommende Ordnung inspiriert, aus der Fiat-Asche aufzusteigen
+genehmigungsfreien, zensurresistenten, wirklich knappen, Peer-to-Peer-, dezentralen Geld- und monetären Zahlungsnetzwerk teilzunehmen, das eine aufkommende Ordnung inspiriert, aus der
+Fiat-Asche aufzusteigen
 
 **Wir sind alle Satoshi**
->*The Times 03/Jan/2009 Kanzler steht kurz vor
-dem zweiten Rettungspaket für Banken*
-
+>*The Times 03/Jan/2009 Chancellor on brink
+of second bailout for banks*
 ~ Text einer Schlagzeile aus The Times of London,
-eingeritzt in den Bitcoin-Genesis-Block von Satoshi
-Nakamoto am 2009-01-03
+die von Satoshi
+Nakamoto am 2009-01-03 in den Bitcoin-Genesis-Block eingraviert wurde
 
 ---
 

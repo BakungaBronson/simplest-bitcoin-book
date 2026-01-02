@@ -1,6 +1,25 @@
 # Simplest Bitcoin Book Translation Tool
 
-A Python script that automatically translates Markdown files for the Simplest Bitcoin Book while preserving their formatting using Google's Gemini AI.
+A Python toolkit for translating and managing the Simplest Bitcoin Book across multiple languages using Google's Gemini AI.
+
+## Complete Workflow
+
+```
+1. TRANSLATE      2. COMBINE           3. HUMAN REVIEW        4. FIX FORMATTING
+   (chapters)        (into one file)      (Google Docs)          (restore markdown)
+       │                  │                    │                       │
+       ▼                  ▼                    ▼                       ▼
+   swahili/        full_language_books/  reviewed_full_language_books/  final_full_language_books/
+   ├── 01-.../     └── Swahili_Book.md   └── Swahili_Book.md            └── Swahili_Book_Fixed.md
+   ├── 02-.../         (original)            (human edits)                  (final output)
+   └── ...
+```
+
+| Directory | Purpose |
+|-----------|---------|
+| `full_language_books/` | Machine-translated combined books (original formatting) |
+| `reviewed_full_language_books/` | Human-edited versions from Google Docs (broken formatting) |
+| `final_full_language_books/` | Final output with human edits + restored formatting |
 
 ## What it does
 
@@ -199,44 +218,21 @@ python combine_language_chapters.py french French_Book.md --title_level 2
 
 ## Repairing Google-Docs-Edited Chapters
 
-When collaborators make edits in **Google Docs** the Markdown formatting (blockquotes, heading hashes, new-line spacing, list markers) and, most importantly, the inline image tags (e.g. `![alt text](image.png)`) are frequently stripped out.  
-The `chapter_fixer.py` utility takes two Markdown files – the **pristine original** and the **edited / broken** version – and automatically merges them so that:
+When collaborators edit in Google Docs, Markdown formatting and image tags get stripped. The `chapter_fixer.py` script merges human edits with proper formatting.
 
-1. All human text edits from the Google Docs draft are kept.
-2. The exact Markdown structure from the original file is restored.
-3. Every image tag contained in the original is re-inserted into its correct position.
+### Usage
 
-Internally the script sends both chapter versions to Google Gemini and instructs it to return a single, fixed Markdown chapter.  Each chapter is processed independently so the book structure is preserved.
-
-### How to use `chapter_fixer.py`
+1. Export your reviewed book from Google Docs and save to `reviewed_full_language_books/`
+2. Run the fixer:
 
 ```bash
-python chapter_fixer.py <original_markdown> <changed_markdown> <output_markdown>
+python chapter_fixer.py full_language_books/Swahili_Book.md reviewed_full_language_books/Swahili_Book.md final_full_language_books/Swahili_Book_Fixed.md
 ```
 
-**Arguments**
-- `<original_markdown>` – The file that contains the correct Markdown formatting and images.
-- `<changed_markdown>` – The Google Docs export containing the new wording but broken formatting.
-- `<output_markdown>` – Where the merged, fixed chapter(s) will be written.
-
-**Example**
-```bash
-# Merge edits from editors back into the original English book
-python chapter_fixer.py english/01-why-we-need/index.md edited_branch/01-why-we-need/index.md fixed/01-why-we-need.md
-```
-
-### What the script does
-1. Splits both input files into chapters by looking for headings that match `# Chapter N`.
-2. For every chapter found in the original it tries to locate the corresponding chapter in the changed file.
-3. If a chapter exists in both versions it calls Gemini with a specialised prompt that:
-   - Constrains Gemini to keep all sentences from the changed version.
-   - Forces it to copy Markdown syntax and image tags from the original.
-4. Chapters that are missing in the changed file are copied as-is from the original, preventing data loss.
-5. The fixed chapters are concatenated together (separated by `---`) and saved to the output file.
-
-### Requirements
-- Same Python and dependency set as the translation script (`google-genai`, `pathlib`, etc.).
-- A valid `GEMINI_API_KEY` exported in your environment.
+The script will:
+- Keep all human text edits from the reviewed version
+- Restore Markdown formatting from the original
+- Re-insert all image tags in correct positions
 
 ## Google Docs Drafts For Review
 
